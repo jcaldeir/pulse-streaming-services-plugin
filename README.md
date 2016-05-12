@@ -7,7 +7,7 @@ Pulse Plugin to consume metrics and events from a Streaming Platform API
 
 |     OS    | Linux | Windows | SmartOS | OS X |
 |:----------|:-----:|:-------:|:-------:|:----:|
-| Supported |   -   |    v    |    -    |  -   |
+| Supported |   v   |    v    |    -    |  -   |
 
 #### Boundary Meter versions v4.2 or later
 
@@ -32,10 +32,10 @@ None
 
 ### Plugin Configuration Fields
 
-|Field Name   |Description                             |
-|:----------------|:---------------------------------------|
-|Source           |Source to use for measurements          |
-|PoolInterval     |How often to send measurement in seconds|
+|Field Name   |Description                                         |
+|:----------------|:-----------------------------------------------|
+|Source           |Streaming Engine Server to get measurements from|
+|PoolInterval     |How often to send measurement in seconds        |
 
 ### Metrics Collected
 

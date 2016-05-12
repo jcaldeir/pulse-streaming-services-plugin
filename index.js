@@ -3,7 +3,7 @@ var _os = require('os');
 //var _tools = require('graphdat-plugin-tools');
 
 var _source = _os.hostname();
-var _interval =  _conf.pollInterval || 10000;
+var _interval =  _conf.pollInterval || 5000;
 
 var _last;
 
@@ -13,7 +13,7 @@ function poll()
 	var cpus = _os.cpus();
 
 	//cpus.length
-	for(var idx = 0; idx < 1; idx++)
+	for(var idx = 0; idx < cpus.length; idx++)
 	{
 		var e = cpus[idx];
 		e.total = 0;

@@ -3,7 +3,7 @@
     "defaultAggregate": "AVG",
     "defaultResolutionMS": 1000,
     "description": "CPU Utilization",
-    "displayName": "CPU utilization",
+    "displayName": "CPU Utilization",
     "displayNameShort": "CPU Util.",
     "isDisabled": 0,
     "unit": "percent"

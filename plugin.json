@@ -4,11 +4,19 @@
   "meterVersionRequired" : "4.2.0-611",
   "unsupportedPlatforms" : [ ],
   "tags" : "cpu,core",
-  "description" : "Provides CPU utilization",
+  "description" : "Provides CPU Utilization",
   "icon": "bmc.png",
   "dashboards" : [
                  {
                  "name" : "BMCtv",
+                 "layout" : "d-w=1&d-h=1&d-pad=5&d-bg=none&d-g-CPU_CORE=0-0-1-1"
+                 },
+				 {
+                 "name" : "P&Atv",
+                 "layout" : "d-w=1&d-h=1&d-pad=5&d-bg=none&d-g-CPU_CORE=0-0-1-1"
+                 },
+				 {
+                 "name" : "REFtv",
                  "layout" : "d-w=1&d-h=1&d-pad=5&d-bg=none&d-g-CPU_CORE=0-0-1-1"
                  }
   ],
@@ -22,15 +30,15 @@
       "name": "pollInterval",
       "description": "How often (in milliseconds) to poll the system for metrics.",
       "type" : "integer",
-      "default" : 1000,
-      "required" : false
+      "default" : 5000,
+      "required" : true
     },
     {
       "title": "Streaming Engine",
       "name": "source",
       "description": "The Source to display in the legend for the CPU data.  It will default to the hostname of the server.",
       "type": "string",
-      "required" : false
+      "required" : true
     }
   ]
 }
