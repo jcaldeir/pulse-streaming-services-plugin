@@ -3,27 +3,27 @@
   "version" : "1.0.0",
   "meterVersionRequired" : "4.2.0-611",
   "unsupportedPlatforms" : [ ],
-  "tags" : "cpu,core",
-  "description" : "Provides CPU Utilization",
+  "tags" : "cpu,core,memry,consumers",
+  "description" : "Provides technical and business metrics about a Streaming Service",
   "icon": "bmc.png",
   "dashboards" : [
                  {
                  "name" : "BMCtv",
-                 "layout" : "d-w=1&d-h=1&d-pad=5&d-bg=none&d-g-CPU_CORE=0-0-1-1"
+                 "layout" : "d-w=1&d-h=1&d-pad=5&d-bg=none&d-g-STREAM_CPU_CORE=0-0-1-1"
                  },
 				 {
                  "name" : "P&Atv",
-                 "layout" : "d-w=1&d-h=1&d-pad=5&d-bg=none&d-g-CPU_CORE=0-0-1-1"
+                 "layout" : "d-w=1&d-h=1&d-pad=5&d-bg=none&d-g-STREAM_MEM_CORE=0-0-1-1"
                  },
 				 {
                  "name" : "REFtv",
-                 "layout" : "d-w=1&d-h=1&d-pad=5&d-bg=none&d-g-CPU_CORE=0-0-1-1"
+                 "layout" : "d-w=1&d-h=1&d-pad=5&d-bg=none&d-g-STREAM_TOTAL_CONSUMERS=0-0-1-1"
                  }
   ],
   "command" : "node index.js $(pollInterval)",
   "postExtract" : "npm install",
   "ignore" : "node_modules",
-  "metrics" : ["CPU_CORE"],
+  "metrics" : ["STREAM_CPU_CORE","STREAM_MEM_CORE","STREAM_TOTAL_CONSUMERS"],
   "paramSchema": [
     {
       "title": "Poll Interval (ms)",

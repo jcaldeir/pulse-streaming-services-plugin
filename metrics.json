@@ -1,10 +1,28 @@
 {
-  "CPU_CORE": {
+  "STREAM_CPU_CORE": {
     "defaultAggregate": "AVG",
     "defaultResolutionMS": 1000,
     "description": "CPU Utilization",
     "displayName": "CPU Utilization",
     "displayNameShort": "CPU Util.",
+    "isDisabled": 0,
+    "unit": "percent"
+  },
+   "STREAM_MEM_CORE": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Memory Utilization",
+    "displayName": "Memory Utilization",
+    "displayNameShort": "Mem. Util.",
+    "isDisabled": 0,
+    "unit": "percent"
+  },
+   "STREAM_TOTAL_CONSUMERS": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Number of Consumers",
+    "displayName": "Number of Consumers",
+    "displayNameShort": "Num. Consumers",
     "isDisabled": 0,
     "unit": "percent"
   }

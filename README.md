@@ -35,7 +35,7 @@ None
 |Field Name   |Description                                         |
 |:----------------|:-----------------------------------------------|
 |Source           |Streaming Engine Server to get measurements from|
-|PoolInterval     |How often to send measurement in seconds        |
+|PollInterval     |How often to send measurement in seconds        |
 
 ### Metrics Collected
 

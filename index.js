@@ -31,8 +31,11 @@ function poll()
 					   (e.total - l.total);
 
 			if (!isNaN(user))
-				console.log('CPU_CORE %d %s-C%d', user, _source, idx + 1);
+				console.log('STREAM_CPU_CORE %d %s-C%d', user, _source, idx + 1);
+			    
 		}
+		console.log('STREAM_MEM_CORE %d %s-C%d', user - idx, _source, idx + 1);
+		console.log('STREAM_TOTAL_CONSUMERS %d %s-C%d', user / idx, _source, idx + 1);
 	}
 
 	_last = cpus;
