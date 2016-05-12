@@ -1,0 +1,36 @@
+{
+  "name" : "Streaming Services Plugin",
+  "version" : "1.0.0",
+  "meterVersionRequired" : "4.2.0-611",
+  "unsupportedPlatforms" : [ ],
+  "tags" : "cpu,core",
+  "description" : "Provides CPU utilization",
+  "icon": "bmc.png",
+  "dashboards" : [
+                 {
+                 "name" : "BMCtv",
+                 "layout" : "d-w=1&d-h=1&d-pad=5&d-bg=none&d-g-CPU_CORE=0-0-1-1"
+                 }
+  ],
+  "command" : "node index.js $(pollInterval)",
+  "postExtract" : "npm install",
+  "ignore" : "node_modules",
+  "metrics" : ["CPU_CORE"],
+  "paramSchema": [
+    {
+      "title": "Poll Interval (ms)",
+      "name": "pollInterval",
+      "description": "How often (in milliseconds) to poll the system for metrics.",
+      "type" : "integer",
+      "default" : 1000,
+      "required" : false
+    },
+    {
+      "title": "Streaming Engine",
+      "name": "source",
+      "description": "The Source to display in the legend for the CPU data.  It will default to the hostname of the server.",
+      "type": "string",
+      "required" : false
+    }
+  ]
+}

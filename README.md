@@ -16,6 +16,10 @@ Pulse Plugin to consume metrics and events from a Streaming Platform API
 
 #### Boundary Meter versions earlier than v4.2
 
+None
+
+#### Server Runtime
+
 |  Runtime | node.js | Python | Java |
 |:---------|:-------:|:------:|:----:|
 | Required |    +    |        |      |
@@ -28,19 +32,24 @@ None
 
 ### Plugin Configuration Fields
 
-None
+|Field Name   |Description                             |
+|:----------------|:---------------------------------------|
+|Source           |Source to use for measurements          |
+|PoolInterval     |How often to send measurement in seconds|
 
 ### Metrics Collected
 
 |Metric Name             |Description                                                   |
 |:-----------------------|:-------------------------------------------------------------|
-|Per core CPU utilization|Per core CPU utilization                                      |
+|CPU utilization         |Total CPU utilization                                         |
 
 ### Dashboards
 
 |Dashboard Name|Metrics Displayed       |
 |:-------------|:-----------------------|
-|CPU Core      |Per core CPU utilization|
+|BMCtv         |CPU utilization         |
+|P&Atv         |CPU utilization         |
+|REFtv         |CPU utilization         |
 
 ### References
 
