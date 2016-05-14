@@ -174,9 +174,9 @@
    "STREAMING_ENGINE_CONNECTION_COUNT": {
     "defaultAggregate": "AVG",
     "defaultResolutionMS": 1000,
-    "description": "Number of Consumers",
-    "displayName": "Number of Consumers",
-    "displayNameShort": "Num. of Consumers",
+    "description": "Online Consumers",
+    "displayName": "Online Consumers",
+    "displayNameShort": "Online Consumers",
     "isDisabled": 0,
     "unit": "number"
   },
@@ -201,45 +201,45 @@
   "STREAMING_APP_BYTES_IN": {
     "defaultAggregate": "AVG",
     "defaultResolutionMS": 1000,
-    "description": "Streaming Engine Free Memory",
-    "displayName": "Streaming Engine Free Memory",
-    "displayNameShort": "Streaming Engine Free Mem.",
+    "description": "Application BytesIn",
+    "displayName": "Application BytesIn",
+    "displayNameShort": "Application BytesIn",
     "isDisabled": 0,
     "unit": "bytecount"
   },
   "STREAMING_APP_BYTES_OUT": {
     "defaultAggregate": "AVG",
     "defaultResolutionMS": 1000,
-    "description": "Streaming Engine Free Memory",
-    "displayName": "Streaming Engine Free Memory",
-    "displayNameShort": "Streaming Engine Free Mem.",
+    "description": "Application BytesOut",
+    "displayName": "Application BytesOut",
+    "displayNameShort": "Application BytesOut",
     "isDisabled": 0,
     "unit": "bytecount"
   },
   "STREAMING_APP_BYTES_IN_RATE": {
     "defaultAggregate": "AVG",
     "defaultResolutionMS": 1000,
-    "description": "Streaming Engine Free Memory",
-    "displayName": "Streaming Engine Free Memory",
-    "displayNameShort": "Streaming Engine Free Mem.",
+    "description": "Application BytesIn Rate",
+    "displayName": "Application BytesIn Rate",
+    "displayNameShort": "App. BytesIn Rate",
     "isDisabled": 0,
     "unit": "bytecount"
   },
   "STREAMING_APP_BYTES_OUT_RATE": {
     "defaultAggregate": "AVG",
     "defaultResolutionMS": 1000,
-    "description": "Streaming Engine Free Memory",
-    "displayName": "Streaming Engine Free Memory",
-    "displayNameShort": "Streaming Engine Free Mem.",
+    "description": "Application BytesOut Rate",
+    "displayName": "Application BytesOut Rate",
+    "displayNameShort": "App. BytesOut Rate",
     "isDisabled": 0,
     "unit": "bytecount"
   },
    "STREAMING_APP_TOTAL_CONNECTIONS": {
     "defaultAggregate": "AVG",
     "defaultResolutionMS": 1000,
-    "description": "Total Connections",
-    "displayName": "Total Connections",
-    "displayNameShort": "Total Conn.",
+    "description": "Application Connections",
+    "displayName": "Application Connections",
+    "displayNameShort": "App. Conn.",
     "isDisabled": 0,
     "unit": "number"
   },
