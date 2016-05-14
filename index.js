@@ -1,45 +1,23 @@
 var _conf = require('./param.json');
-var _os = require('os');
-//var _tools = require('graphdat-plugin-tools');
+var _streaming = require('./plugin/streaming.js'); 
 
-var _source = _os.hostname();
 var _interval =  _conf.pollInterval || 5000;
-
-var _last;
-
+var _apiHost =  _conf.apiHost || localhost;
+var _apiPort =  _conf.apiPort || 8087;
 
 function poll()
 {
-	var cpus = _os.cpus();
 
-	//cpus.length
-	for(var idx = 0; idx < cpus.length; idx++)
-	{
-		var e = cpus[idx];
-		e.total = 0;
-		for(var t in e.times)
-			e.total += e.times[t];
-	}
-
-	if (_last)
-	{
-		for(var idx = 0; idx < cpus.length; idx++)
-		{
-			var e = cpus[idx];
-			var l = _last[idx];
-			var user = (e.times.user - l.times.user)  /
-					   (e.total - l.total);
-
-			if (!isNaN(user))
-				console.log('STREAM_CPU_CORE %d %s-C%d', user, _source, idx + 1);
-			    
-		}
-		console.log('STREAM_MEM_CORE %d %s-C%d', user - idx, _source, idx + 1);
-		console.log('STREAM_TOTAL_CONSUMERS %d %s-C%d', user / idx, _source, idx + 1);
-	}
-
-	_last = cpus;
-
+	_streaming.getServerCPU();
+	_streaming.getServerMemory()
+	_streaming.getStreamingEngineMeasurements( _apiHost, _apiPort);
+	_streaming.getStreamingApplicationMeasurements( _apiHost, _apiPort, "BMCtv");
+	_streaming.getStreamingApplicationMeasurements( _apiHost, _apiPort, "P&Atv");
+	_streaming.getStreamingApplicationMeasurements( _apiHost, _apiPort, "REFtv");
+	_streaming.getStreamingSubscriptionMetrics();
+	_streaming.getStreamingFinancialMetrics();
+	
+	
 	setTimeout(poll, _interval);
 }
 

@@ -1,5 +1,8 @@
 # pulse-streaming-services-plugin
-Pulse Plugin to consume metrics and events from a Streaming Platform API
+Pulse Plugin to consume metrics and events from Streaming Platforms
+
+### Streaming Platforms Supported
+ - Wowza Media Systems- http://www.wowza.com
 
 ### Prerequisites
 
@@ -32,10 +35,12 @@ None
 
 ### Plugin Configuration Fields
 
-|Field Name   |Description                                         |
-|:----------------|:-----------------------------------------------|
-|Source           |Streaming Engine Server to get measurements from|
-|PollInterval     |How often to send measurement in seconds        |
+|Field Name   |Description                                             |
+|:----------------|:---------------------------------------------------|
+|Source           |Meter collecting metrics from the Streaming Platform|
+|PollInterval     |How often to send measurements in seconds           |
+|Host             |Hostname/IP of the Streaming Platform API server    |
+|Port             |Port of the Streaming Platform API server           |
 
 ### Metrics Collected
 
@@ -45,11 +50,11 @@ None
 
 ### Dashboards
 
-|Dashboard Name|Metrics Displayed       |
-|:-------------|:-----------------------|
-|BMCtv         |CPU utilization         |
-|P&Atv         |CPU utilization         |
-|REFtv         |CPU utilization         |
+|Dashboard Name|Metrics Displayed                                                       |
+|:-------------|:-----------------------------------------------------------------------|
+|BMCtv         |                                                                        |
+|P&Atv         |                                                                        |
+|REFtv         |                                                                        |
 
 ### References
 

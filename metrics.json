@@ -1,5 +1,6 @@
 {
-  "STREAM_CPU_CORE": {
+  
+  "STREAMING_SERVER_CPU_CORE": {
     "defaultAggregate": "AVG",
     "defaultResolutionMS": 1000,
     "description": "CPU Utilization",
@@ -8,22 +9,317 @@
     "isDisabled": 0,
     "unit": "percent"
   },
-   "STREAM_MEM_CORE": {
+   "STREAMING_SERVER_MEM_TOTAL": {
     "defaultAggregate": "AVG",
     "defaultResolutionMS": 1000,
-    "description": "Memory Utilization",
-    "displayName": "Memory Utilization",
-    "displayNameShort": "Mem. Util.",
+    "description": "Total Memory",
+    "displayName": "Total Memory",
+    "displayNameShort": "Total Mem.",
+    "isDisabled": 0,
+    "unit": "bytecount"
+  },
+  "STREAMING_SERVER_MEM_FREE": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Free Memory",
+    "displayName": "Free Memory",
+    "displayNameShort": "Free Mem.",
+    "isDisabled": 0,
+    "unit": "bytecount"
+  },
+  "STREAMING_SERVER_MEM_USED": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Used Memory",
+    "displayName": "Used Memory",
+    "displayNameShort": "Used Mem.",
+    "isDisabled": 0,
+    "unit": "bytecount"
+  }, 
+   "STREAMING_SUBSCRIPTION_NEW_CUSTOMERS": {
+    "defaultAggregate": "SUM",
+    "defaultResolutionMS": 1000,
+    "description": "New Subscriptions",
+    "displayName": "New Subscriptions",
+    "displayNameShort": "New Subs.",
+    "isDisabled": 0,
+    "unit": "number"
+  },
+   "STREAMING_SUBSCRIPTION_CANCELING_CUSTOMERS": {
+    "defaultAggregate": "SUM",
+    "defaultResolutionMS": 1000,
+    "description": "Cancelled  Subscriptions",
+    "displayName": "Cancelled Subscriptions",
+    "displayNameShort": "Cancelled Subs.",
+    "isDisabled": 0,
+    "unit": "number"
+  },
+   "STREAMING_SUBSCRIPTION_CHANNELS_VIEWED_TOTAL": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Channels Viewed",
+    "displayName": "Channels Viewed",
+    "displayNameShort": "Channels Viewed",
+    "isDisabled": 0,
+    "unit": "number"
+  },
+  "STREAMING_FINANCIAL_REVENUE_TOTAL": {
+    "defaultAggregate": "SUM",
+    "defaultResolutionMS": 1000,
+    "description": "Total Revenue",
+    "displayName": "Total Revenue",
+    "displayNameShort": "Total Rev.",
+    "isDisabled": 0,
+    "unit": "number"
+  },
+  "STREAMING_FINANCIAL_REVENUE_PER_CONSUMER": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Revenue per Consumer",
+    "displayName": "Revenue per Consumer",
+    "displayNameShort": "Revenue per Con.",
+    "isDisabled": 0,
+    "unit": "number"
+  },
+  "STREAMING_FINANCIAL_REVENUE_PER_SECOND": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Revenue per Second",
+    "displayName": "Revenue per Second",
+    "displayNameShort": "Revenue per Sec.",
+    "isDisabled": 0,
+    "unit": "number"
+  },
+  "STREAMING_ENGINE_CPU_IDLE": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Streaming Engine CPU Idle",
+    "displayName": "Streaming Engine CPU Idle",
+    "displayNameShort": "Engine CPU Idle",
     "isDisabled": 0,
     "unit": "percent"
   },
-   "STREAM_TOTAL_CONSUMERS": {
+   "STREAMING_ENGINE_CPU_USER": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Streaming Engine CPU User",
+    "displayName": "Streaming Engine CPU User",
+    "displayNameShort": "Engine CPU User",
+    "isDisabled": 0,
+    "unit": "percent"
+  },
+   "STREAMING_ENGINE_CPU_SYSTEM": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Streaming Engine CPU System",
+    "displayName": "Streaming Engine CPU System",
+    "displayNameShort": "Engine CPU System",
+    "isDisabled": 0,
+    "unit": "percent"
+  },
+  "STREAMING_ENGINE_MEMORY_FREE": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Streaming Engine Free Memory",
+    "displayName": "Streaming Engine Free Memory",
+    "displayNameShort": "Streaming Engine Free Mem.",
+    "isDisabled": 0,
+    "unit": "bytecount"
+  },
+  "STREAMING_ENGINE_MEMORY_USED": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Streaming Engine Used Memory",
+    "displayName": "Streaming Engine Used Memory",
+    "displayNameShort": "Streaming Engine Used Mem.",
+    "isDisabled": 0,
+    "unit": "bytecount"
+  },
+  "STREAMING_ENGINE_HEAP_FREE": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Streaming Engine Heap Free",
+    "displayName": "Streaming Engine Heap Free",
+    "displayNameShort": "Streaming Engine Heap Free",
+    "isDisabled": 0,
+    "unit": "bytecount"
+  },
+  "STREAMING_ENGINE_HEAP_USED": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Streaming Engine Heap Used",
+    "displayName": "Streaming Engine Heap Used",
+    "displayNameShort": "Streaming Engine Heap Used",
+    "isDisabled": 0,
+    "unit": "bytecount"
+  },
+  "STREAMING_ENGINE_DISK_FREE": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Streaming Engine Free Disk",
+    "displayName": "Streaming Engine Free Disk",
+    "displayNameShort": "Streaming Engine Free Disk",
+    "isDisabled": 0,
+    "unit": "bytecount"
+  },
+  "STREAMING_ENGINE_DISK_USED": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Streaming Engine Used Disk",
+    "displayName": "Streaming Engine Used Disk",
+    "displayNameShort": "Streaming Engine Used Disk",
+    "isDisabled": 0,
+    "unit": "bytecount"
+  },
+   "STREAMING_ENGINE_CONNECTION_COUNT": {
     "defaultAggregate": "AVG",
     "defaultResolutionMS": 1000,
     "description": "Number of Consumers",
     "displayName": "Number of Consumers",
-    "displayNameShort": "Num. Consumers",
+    "displayNameShort": "Num. of Consumers",
     "isDisabled": 0,
-    "unit": "percent"
+    "unit": "number"
+  },
+   "STREAMING_ENGINE_SERVER_UPTIME": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Streaming Engine Uptime",
+    "displayName": "Streaming Engine Uptime",
+    "displayNameShort": "Streaming Engine Uptime",
+    "isDisabled": 0,
+    "unit": "duration"
+  },
+  "STREAMING_APP_ENGINE_UPTIME": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Application Uptime",
+    "displayName": "Application Uptime",
+    "displayNameShort": "App. Uptime",
+    "isDisabled": 0,
+    "unit": "duration"
+  },
+  "STREAMING_APP_BYTES_IN": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Streaming Engine Free Memory",
+    "displayName": "Streaming Engine Free Memory",
+    "displayNameShort": "Streaming Engine Free Mem.",
+    "isDisabled": 0,
+    "unit": "bytecount"
+  },
+  "STREAMING_APP_BYTES_OUT": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Streaming Engine Free Memory",
+    "displayName": "Streaming Engine Free Memory",
+    "displayNameShort": "Streaming Engine Free Mem.",
+    "isDisabled": 0,
+    "unit": "bytecount"
+  },
+  "STREAMING_APP_BYTES_IN_RATE": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Streaming Engine Free Memory",
+    "displayName": "Streaming Engine Free Memory",
+    "displayNameShort": "Streaming Engine Free Mem.",
+    "isDisabled": 0,
+    "unit": "bytecount"
+  },
+  "STREAMING_APP_BYTES_OUT_RATE": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Streaming Engine Free Memory",
+    "displayName": "Streaming Engine Free Memory",
+    "displayNameShort": "Streaming Engine Free Mem.",
+    "isDisabled": 0,
+    "unit": "bytecount"
+  },
+   "STREAMING_APP_TOTAL_CONNECTIONS": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Total Connections",
+    "displayName": "Total Connections",
+    "displayNameShort": "Total Conn.",
+    "isDisabled": 0,
+    "unit": "number"
+  },
+   "STREAMING_APP_WEBM_CONNECTIONS": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "WEBM Connections",
+    "displayName": "WEBM Connections",
+    "displayNameShort": "WEBM Conn.",
+    "isDisabled": 0,
+    "unit": "number"
+  },
+   "STREAMING_APP_DVRCHUNKS_CONNECTIONS": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "DVRCHUNKS Connections",
+    "displayName": "DVRCHUNKS Connections",
+    "displayNameShort": "DVRCHUNKS Conn.",
+    "isDisabled": 0,
+    "unit": "number"
+  },
+   "STREAMING_APP_RTMP_CONNECTIONS": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Adobe RTMP Connections",
+    "displayName": "Adobe RTMP Connections",
+    "displayNameShort": "Adobe RTMP Conn.",
+    "isDisabled": 0,
+    "unit": "number"
+  },
+   "STREAMING_APP_MPEGDASH_CONNECTIONS": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "MPEG DASH Connections",
+    "displayName": "MPEG DASH Connections",
+    "displayNameShort": "MPEG DASH Conn.",
+    "isDisabled": 0,
+    "unit": "number"
+  },
+   "STREAMING_APP_CUPERTINO_CONNECTIONS": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Apple Connections",
+    "displayName": "Apple Connections",
+    "displayNameShort": "Apple Conn.",
+    "isDisabled": 0,
+    "unit": "number"
+  },
+   "STREAMING_APP_SANJOSE_CONNECTIONS": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Android Connections",
+    "displayName": "Android Connections",
+    "displayNameShort": "Android Conn.",
+    "isDisabled": 0,
+    "unit": "number"
+  },
+   "STREAMING_APP_SMOOTH_CONNECTIONS": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Microsoft Smooth Connections",
+    "displayName": "Microsoft Smooth Connections",
+    "displayNameShort": "Msft. Smooth Conn.",
+    "isDisabled": 0,
+    "unit": "number"
+  },
+   "STREAMING_APP_RTP_CONNECTIONS": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "RTSP/RTP Connections",
+    "displayName": "RTSP/RTP Connections",
+    "displayNameShort": "RTSP/RTP Conn.",
+    "isDisabled": 0,
+    "unit": "number"
   }
+
 }
+
+
+			   
+			   
+			   
+			   

@@ -1,17 +1,18 @@
 {
 	"name": "pulse-streaming-services-plugin",
 	"version": "1.0.0",
-	"description": "Streaming Services Plugin",
+	"description": "Streaming Services Plugin for TrueSight Pulse",
 	"main": "index.js",
 	"dependencies": {
-		"graphdat-plugin-tools" : "0.0.1"
+		"request": "*"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/graphdat/plugin-cpu_core"
+		"url": "https://github.com/jcaldeir/pulse-streaming-services-plugin"
 	},
 	"keywords": [
 		"plugin",
+		"streaming",
 		"cpu",
 		"core"
 	],

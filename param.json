@@ -1,4 +1,6 @@
 {
-	"pollInterval" : 5000,
-	"source" : "Streaming Engine"
+	"pollInterval" : 15000,
+	"source" : "Streaming Engine",
+	"apiHost" : "localhost",
+	"apiPort" : 8087	
 }
