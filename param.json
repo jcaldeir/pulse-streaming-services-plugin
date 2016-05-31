@@ -2,5 +2,12 @@
 	"pollInterval" : 15000,
 	"source" : "Streaming Engine",
 	"apiHost" : "localhost",
-	"apiPort" : 8087	
+	"apiPort" : 8087,
+	"consumer_key" : "DRfREmdIjIsEDzoJM947rjysr",
+	"consumer_secret" : "xlRsvB2dNKqjJGG4skWgk05LCGLQP5EgSzKpZf06JLj1gWwHAs",
+	"access_token_key" : "114487744-AyTaeg9ymAkYDqoKJP3pEkvf6FZgKP536g5XwVIS",
+	"access_token_secret" : "BQxBSBx17Ha7R59vsuLWqPOUXPQn67FeAJw03CTwckZyJ",
+	"contextWords" : ["XPTO", "streaming"],
+	"pulseEventsAPI" : "https://api.truesight-staging.bmc.com/v1/events",
+	"authorizationToken" : "Basic am9hb19jYWxkZWlyYUBibWMuY29tOjM5NjIxODQ5LWY3MWQtNGVjYi05ZDVlLTFlYmZjMjY1NjhmZg=="
 }

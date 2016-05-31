@@ -2,6 +2,10 @@
 
 var streamingAPI = require('request');
 var _os = require('os');
+var _conf = require('../param.json');
+
+var apiHost =  _conf.apiHost || localhost;
+var apiPort =  _conf.apiPort || 8087;
 
 var _source = _os.hostname();
 var _last;
@@ -9,11 +13,9 @@ var MB = 1; // (1024*1024);
 var GB = 1; //MB * 1024;
 var MINUTES = 1; //60; //60 seconds
 var HOURS = 1; //60 * MINUTES; //60 minutes
-
-				
+			
 var exports = module.exports = {};
    
-
 function randomIntFromInterval(min,max)
 {
     return Math.floor(Math.random()*(max-min+1)+min);
@@ -81,12 +83,12 @@ exports.getStreamingFinancialMetrics = function() {
 						
 }
 
-exports.getStreamingEngineMeasurements = function(host, port) {
+exports.getStreamingEngineMeasurements = function() {
 								
 		var context = "v2/machine/monitoring/current"
 		
 		var apiOptions = {
-						  url: "http://" + host + ":" + port + "/" + context,
+						  url: "http://" + apiHost + ":" + apiPort + "/" + context,
 						  headers: {
 							'Accept': 'application/json; charset=UTF-8'
 						  }
@@ -124,12 +126,12 @@ exports.getStreamingEngineMeasurements = function(host, port) {
 				
 }
 
-exports.getStreamingApplicationMeasurements = function(host, port, app) {
+exports.getStreamingApplicationMeasurements = function( app ) {
 				
 		var context = "v2/servers/_defaultServer_/vhosts/_defaultVHost_/applications/" + app + "/monitoring/current"
 		
 		var apiOptions = {
-						  url: "http://" + host + ":" + port + "/" + context,
+						  url: "http://" + apiHost + ":" + apiPort + "/" + context,
 						  headers: {
 							'Accept': 'application/json; charset=UTF-8'
 						  }
@@ -167,6 +169,13 @@ exports.getStreamingApplicationMeasurements = function(host, port, app) {
 				
 		streamingAPI.get(apiOptions, processResult);		
 				
+}
+
+exports.getStreamingCustomMetrics = function() {
+				
+		//Add your own custom metrics here...		
+		//example - METRIC NAME, VALUE, SOURCE
+		//console.log('STREAMING_CUSTOM_METRIC %d %s', randomIntFromInterval(0,100), _source);				
 }
 
 

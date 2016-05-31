@@ -4,7 +4,9 @@
 	"description": "Streaming Services Plugin for TrueSight Pulse",
 	"main": "index.js",
 	"dependencies": {
-		"request": "*"
+		"request": "*",
+		"user-stream": "*",
+		"sentiment": "*"
 	},
 	"repository": {
 		"type": "git",
@@ -13,8 +15,7 @@
 	"keywords": [
 		"plugin",
 		"streaming",
-		"cpu",
-		"core"
+		"services"
 	],
 	"author": "João Caldeira <joao_caldeira@bmc.com>",
 	"license": "Apache v2",

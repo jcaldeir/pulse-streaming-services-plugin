@@ -1,10 +1,14 @@
 # pulse-streaming-services-plugin
-Pulse Plugin to consume metrics and events from Streaming Platforms
+Pulse Plugin to consume metrics from Streaming Platforms and perform sentiment analysis on tweets related with the delivered streaming service
 
 ### Streaming Platforms Supported
- - Wowza Media Systems- http://www.wowza.com
+ - Wowza Media Systems - http://www.wowza.com for metrics about streaming services
+ 
+### Social Networks Supported
+ - Twitter - http://www.twitter.com - To get specific user stream tweets and mapping them as events. This is used for sentiment analysis of tweets related with the streaming services being delivered
 
 ### Prerequisites
+ - The Twitter integration is supported by AFINN-111 wordlist to perform sentiment analysis on arbitrary blocks of input text
 
 #### Supported OS
 
