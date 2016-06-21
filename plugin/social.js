@@ -81,8 +81,12 @@ exports.listenToTwitterPosts = function( contextWords ) {
 			  var tweetOptions = {
 						  url: pulseAPI,
 						  body:  postData,
+						  auth: {
+								user: _conf.user,
+								pass: _conf.pass,
+								sendImmediately: true
+							},
 						  headers: {
-							'Authorization': authorizationToken,
 							'Content-type' : 'application/json; charset=UTF-8' 
 						  }
 				};

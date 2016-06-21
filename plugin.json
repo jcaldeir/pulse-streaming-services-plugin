@@ -3,7 +3,7 @@
   "version" : "1.0.0",
   "meterVersionRequired" : "4.2.0-611",
   "unsupportedPlatforms" : [ ],
-  "tags" : "cpu,core,memory,consumers",
+  "tags" : "cpu,memory,consumers,subscribers",
   "description" : "Provides technical and business metrics about a Streaming Service",
   "icon": "bmc.png",
   "dashboards" : [
@@ -89,6 +89,65 @@
       "type" : "integer",
       "default" : 8087,
       "required" : true
+    },
+	{
+      "title": "Pulse API (URL)",
+      "name": "pulseEventsAPI",
+      "description": "Pulse API URL to where you want to send events.",
+      "type" : "string",
+      "default" : "https://api.truesight-staging.bmc.com",
+      "required" : true
+    },
+	{
+      "title": "Username",
+      "name": "user",
+      "description": "User to connect to TrueSight Pulse API.",
+      "type" : "string",
+      "required" : true
+    },
+	{
+      "title": "Token Key",
+      "name": "pass",
+      "description": "User Token to connect to TrueSight Pulse API.",
+      "type" : "string",
+      "required" : true
+    },
+	{
+      "title": "Twitter API Consumer Key",
+      "name": "consumer_key",
+      "description": "Connect to Twitter API.",
+      "type" : "string",
+      "required" : false
+    },
+	{
+      "title": "Twitter API Consumer Secret",
+      "name": "consumer_secret",
+      "description": "Connect to Twitter API.",
+      "type" : "string",
+      "required" : false
+    },
+	{
+      "title": "Twitter API Access Token Key",
+      "name": "access_token_key",
+      "description": "Connect to Twitter API.",
+      "type" : "string",
+      "required" : false
+    },
+	{
+      "title": "Twitter API Access Token Secret",
+      "name": "access_token_secret",
+      "description": "Connect to Twitter API.",
+      "type" : "string",
+      "required" : false
+    },
+	{
+      "title": "Search context words in Twitter",
+      "name": "contextWords",
+      "description": "Search context words in Twitter",
+      "type" : "string",
+      "required" : false
     }
   ]
 }
+
+	
